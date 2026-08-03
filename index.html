@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Atomic Habits PDF Edition</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="landing-card">
+    
+    <!-- Top Header -->
+    <header class="header">
+      <div class="brand-bar">
+        <img src="amazon-logo.png" alt="Amazon Logo" class="amazon-logo">
+        <span class="divider">|</span>
+        <span class="digital-badge">DIGITAL EDITION</span>
+      </div>
+
+      <h1 class="main-title">
+        Download <span class="highlight">Atomic</span><br>
+        <span class="highlight">Habits</span> PDF Edition
+      </h1>
+
+      <p class="subtitle">
+        Get the #1 Amazon Bestseller by James Clear. Learn how to build good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
+      </p>
+    </header>
+
+    <!-- Content / Book Card Container -->
+    <main class="content">
+      <div class="book-card">
+        <div class="cover-container">
+          <img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg" alt="Atomic Habits Book Cover" class="book-cover">
+        </div>
+
+        <div class="features-box">
+          <ul class="feature-list">
+            <li>
+              <span class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span><strong>Full Uncut Edition :</strong> 320 pages</span>
+            </li>
+            <li>
+              <span class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span><strong>Step by step framework :</strong> proven habit system</span>
+            </li>
+            <li>
+              <span class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span><strong>Universal Compatibility :</strong> IOS, Android & PC</span>
+            </li>
+          </ul>
+
+          <hr class="card-divider">
+
+          <div class="card-footer">
+            <span class="green-text text-bold">Instant PDF Access</span>
+            <div class="pricing">
+              <span class="old-price">$27.00</span>
+              <span class="green-text text-extrabold">FREE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Section -->
+      <div class="progress-box">
+        <div class="progress-info">
+          <span class="orange-text">FREE DOWNLOADS LEFT : <strong id="copies-count">25 COPIES</strong></span>
+          <span class="gray-text text-small" id="claimed-percentage">73% CLAIMED</span>
+        </div>
+        <!-- 100% Full Gray Track -->
+        <div class="progress-track">
+          <!-- 73% Orange Line Fill on top -->
+          <div class="progress-fill" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Step Instructions -->
+      <ol class="steps-list">
+        <li>
+          <span class="step-badge">1</span>
+          <span class="step-text">Click the button below to start instant verification.</span>
+        </li>
+        <li>
+          <span class="step-badge">2</span>
+          <span class="step-text">Complete ONE quick & simple offer to unlock the file link.</span>
+        </li>
+        <li>
+          <span class="step-badge">3</span>
+          <span class="step-text">Your Atomic Habits PDF download will start automatically!</span>
+        </li>
+      </ol>
+
+      <!-- CTA Button -->
+      <button onclick="window.location.href='https://appsave.store/cl/i/271vo6'"class="cta-button" id="download-btn">
+        <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>COMPLETE 1 OFFER TO DOWNLOAD</span>
+      </button>
+
+      <span class="disclaimer">
+        * Verification is required to prevent automated bots and ensure fair distribution of free copies. This is a one-time process.
+      </span>
+    </main>
+
+  </div>
+
+  <!-- Dynamic Phone Push-Notification (Drops from Top) -->
+  <div id="notification-toast" class="notification-toast">
+    <div class="notification-icon">
+      <!-- PDF Document Icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <text x="7" y="17" font-size="6.5" font-weight="900" fill="currentColor" stroke="none">PDF</text>
+      </svg>
+    </div>
+    <div class="notification-content">
+      <span class="notification-title">RECENT DOWNLOAD</span>
+      <span class="notification-text" id="notification-user">@john_doe just unlocked the ebook</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

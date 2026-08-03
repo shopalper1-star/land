@@ -1,0 +1,405 @@
+/* Custom Variables */
+:root {
+  --bg-color: #0b1426;
+  --card-bg-gradient: linear-gradient(180deg, #2a224a 0%, #171833 100%);
+  --feature-box-bg: rgba(255, 255, 255, 0.08);
+  --progress-bg: #070e1b;
+  --progress-track-gray: #333d4e; /* Visible gray for the 100% empty bar */
+  
+  --primary-orange: #ff6600;
+  --bright-green: #20e070;
+  --text-white: #ffffff;
+  --text-muted: #8e9bb0;
+  
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 12px;
+}
+
+.landing-card {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Styling for the logo image */
+.amazon-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+
+.divider {
+  color: #4a5568;
+  font-size: 18px;
+}
+
+.digital-badge {
+  border: 1.5px solid var(--primary-orange);
+  color: var(--primary-orange);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.main-title {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: var(--text-white);
+  margin-bottom: 16px;
+}
+
+.main-title .highlight {
+  color: var(--primary-orange);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Book Card */
+.content {
+  width: 100%;
+}
+
+.book-card {
+  background: var(--card-bg-gradient);
+  border-radius: 24px;
+  padding: 24px 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+.cover-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.book-cover {
+  width: 160px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Features Inside Card */
+.features-box {
+  background: var(--feature-box-bg);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+.feature-list strong {
+  color: var(--text-white);
+}
+
+.check-circle {
+  background: var(--primary-orange);
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.check-circle svg {
+  width: 12px;
+  height: 12px;
+}
+
+.card-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 14px 0 12px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.old-price {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+.green-text { color: var(--bright-green); }
+.orange-text { color: var(--primary-orange); }
+.gray-text { color: var(--text-muted); }
+
+.text-bold { font-weight: 600; }
+.text-extrabold { font-weight: 800; }
+.text-small { font-size: 10px; letter-spacing: 0.5px; }
+
+/* Progress Section */
+.progress-box {
+  background: var(--progress-bg);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Full 100% Gray Progress Track */
+.progress-track {
+  background: var(--progress-track-gray);
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 73% Orange Fill Line Over The Track */
+.progress-fill {
+  background: var(--primary-orange);
+  height: 100%;
+  width: 0%; /* Dynamic fill animated by JavaScript up to 73% */
+  border-radius: 10px;
+  transition: width 1s ease-out;
+}
+
+/* Steps Section */
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 0 4px;
+}
+
+.steps-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary-orange);
+  color: var(--primary-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+/* CTA Button */
+.cta-button {
+  width: 100%;
+  background: var(--primary-orange);
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  transition: transform 0.15s ease, background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #ff751a;
+  transform: translateY(-1px);
+}
+
+.cta-button:active {
+  transform: translateY(1px);
+}
+
+.download-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #000000;
+}
+
+.disclaimer {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 12px auto 0;
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+
+
+
+/* Mobile Responsiveness for Notification Drop */
+@media (max-width: 480px) {
+  .notification-toast {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    max-width: none;
+  }
+}
+/* Unchanged exact toast settings */
+.notification-toast {
+  position: fixed;
+  top: 16px;
+  left: 50%; 
+  width: calc(100% - 32px);
+  max-width: 360px;
+  background: rgba(18, 25, 38, 0.65); 
+  backdrop-filter: blur(16px) saturate(180%); 
+  -webkit-backdrop-filter: blur(16px) saturate(180%); 
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px; 
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.15);           
+  z-index: 1000;
+  opacity: 0;
+  transform: translate(-50%, -120px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+  pointer-events: none;
+}
+
+.notification-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Updated Icon styling to Green */
+.notification-icon {
+  background: rgba(32, 224, 112, 0.15); /* Soft translucent green backdrop */
+  color: var(--bright-green); /* Green icon color (#20e070) */
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notification-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Updated Title styling to Gray */
+.notification-title {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-muted); /* Gray text color (#8e9bb0) */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.notification-text {
+  font-size: 12px;
+  color: var(--text-white);
+  font-weight: 500;
+  margin-top: 2px;
+}
