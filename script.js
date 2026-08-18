@@ -253,7 +253,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const displayYear = book.releaseYear && book.releaseYear.trim() !== '' ? book.releaseYear : '2026';
 
       card.innerHTML = `
-        <img src="${imagePath}" alt="${book.name} cover" class="book-cover" 
+        <img src="${imagePath}" alt="${book.name} cover" class="book-cover"
+             loading="lazy"
              onerror="this.onerror=null; this.src='${placeholderPath}';">
         <div class="card-content">
           <div class="card-top-info">
