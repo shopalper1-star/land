@@ -591,7 +591,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // HOME PAGE - LOAD BOOKS
   // ===============================
   if (grid && searchInput) {
-    fetch('Bestsellers_Parsed_Full.csv')
+    fetch('./Bestsellers_Parsed_full.csv')
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text();
