@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="tab-title">Download Digital Edition</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="download_style.css">
+</head>
+<body>
+
+  <div class="landing-card">
+
+    <!-- Top Header -->
+    <header class="header">
+      <a href="index.html" class="brand-bar" title="Return to Homepage">
+        <img src="amazon-logo.png" alt="Amazon Logo" class="amazon-logo">
+        <span class="divider">|</span>
+        <span class="digital-badge">DIGITAL EDITION</span>
+      </a>
+
+      <h1 class="main-title" id="dynamic-title">
+        Download <span class="highlight">Bestseller</span> PDF Edition
+      </h1>
+
+      <p class="subtitle" id="dynamic-subtitle">
+        Get instant digital access. Learn, grow, and master the core frameworks contained within this verified publication.
+      </p>
+    </header>
+
+    <!-- Content / Book Card Container -->
+    <main class="content">
+      <div class="book-card">
+        <div class="cover-container">
+          <img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="book-cover">
+        </div>
+
+        <div class="features-box">
+          <ul class="feature-list">
+            <li>
+              <span class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span><strong>Full Uncut Edition :</strong> Complete text</span>
+            </li>
+            <li>
+              <span class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span><strong>Verified Framework :</strong> High quality digital file</span>
+            </li>
+            <li>
+              <span class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span><strong>Universal Compatibility :</strong> iOS, Android & PC</span>
+            </li>
+          </ul>
+
+          <hr class="card-divider">
+
+          <div class="card-footer">
+            <span class="green-text text-bold">Instant PDF Access</span>
+            <div class="pricing">
+              <span class="old-price">$27.00</span>
+              <span class="green-text text-extrabold">FREE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Section -->
+      <div class="progress-box">
+        <div class="progress-info">
+          <span class="orange-text">FREE DOWNLOADS LEFT : <strong id="copies-count">25 COPIES</strong></span>
+          <span class="gray-text text-small" id="claimed-percentage">73% CLAIMED</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Step Instructions -->
+      <ol class="steps-list">
+        <li>
+          <span class="step-badge">1</span>
+          <span class="step-text">Click the button below to start instant verification.</span>
+        </li>
+        <li>
+          <span class="step-badge">2</span>
+          <span class="step-text">Complete ONE quick & simple offer to unlock the file link.</span>
+        </li>
+        <li>
+          <span class="step-badge">3</span>
+          <span class="step-text">Your PDF download will start automatically!</span>
+        </li>
+      </ol>
+
+      <!-- CTA Button -->
+      <button onclick="window.location.href='https://appsave.store/cl/i/271vo6'" class="cta-button" id="download-btn">
+        <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>COMPLETE 1 OFFER TO DOWNLOAD</span>
+      </button>
+
+      <span class="disclaimer">
+        * Verification is required to prevent automated bots and ensure fair distribution of free copies. This is a one-time process.
+      </span>
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Digital Library Showroom. All rights reserved.</p>
+    <p>Providing secure, high-speed digital access to verified publications.</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><a href="https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+      <li><a href="contact_us.html">Contact Support</a></li>
+    </ul>
+  </footer>
+
+  <!-- Dynamic Phone Push-Notification -->
+  <div id="notification-toast" class="notification-toast">
+    <div class="notification-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <text x="7" y="17" font-size="6.5" font-weight="900" fill="currentColor" stroke="none">PDF</text>
+      </svg>
+    </div>
+    <div class="notification-content">
+      <span class="notification-title">RECENT DOWNLOAD</span>
+      <span class="notification-text" id="notification-user">@john_doe just unlocked the ebook</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

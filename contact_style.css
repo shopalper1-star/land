@@ -1,0 +1,275 @@
+:root {
+  --bg-color: #0b1426;
+  --card-bg-gradient: linear-gradient(180deg, #1e2640 0%, #121829 100%);
+  --primary-orange: #ff6600;
+  --bright-green: #20e070;
+  --text-white: #ffffff;
+  --text-muted: #8e9bb0;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  width: 100%;
+  padding: 24px 16px 12px;
+}
+
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.amazon-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+
+.divider {
+  color: #4a5568;
+  font-size: 18px;
+}
+
+.digital-badge {
+  border: 1.5px solid var(--primary-orange);
+  color: var(--primary-orange);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Contact Container */
+.contact-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--card-bg-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 35px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.contact-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--text-white);
+}
+
+.contact-title .highlight {
+  color: var(--primary-orange);
+}
+
+.contact-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: var(--text-white);
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-orange);
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: var(--primary-orange);
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.submit-btn:hover {
+  background: #ff751a;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn svg {
+  stroke: #000000;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.contact-info a {
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* FOOTER - Matches Showroom Container */
+/* =============================== */
+.site-footer {
+  background-color: #121829;
+  border-top: 1px solid #2a2e45;
+  text-align: center;
+  padding: 25px 20px;
+  color: #8892b0;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+.site-footer p {
+  margin-bottom: 6px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* RESPONSIVE - MOBILE */
+/* =============================== */
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 25px 20px;
+  }
+
+  .contact-title {
+    font-size: 26px;
+  }
+
+  .contact-subtitle {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+}

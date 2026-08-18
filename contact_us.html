@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Digital Library Showroom</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="contact_style.css">
+</head>
+<body>
+
+  <!-- Header with Clickable Brand Bar -->
+  <header class="header">
+    <a href="index.html" class="brand-bar" title="Return to Homepage">
+      <img src="amazon-logo.png" alt="Amazon Logo" class="amazon-logo">
+      <span class="divider">|</span>
+      <span class="digital-badge">DIGITAL EDITION</span>
+    </a>
+  </header>
+
+  <!-- Contact Form Section -->
+  <main class="contact-container">
+    <div class="contact-card">
+      <h1 class="contact-title">Contact <span class="highlight">Support</span></h1>
+      <p class="contact-subtitle">We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+
+      <form id="contact-form" action="https://formsubmit.co/hadaa2290@gmail.com" method="POST">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Contact Form Submission from Digital Library Showroom">
+        <!-- Use _next with full URL to your thank you page -->
+        <input type="hidden" name="_next" value="http://localhost:5500/thank-you.html">
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="Full Name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="Phone Number" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="Write your message here..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2L11 13"></path>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+          </svg>
+          Send Message
+        </button>
+      </form>
+
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Digital Library Showroom. All rights reserved.</p>
+    <p>Providing secure, high-speed digital access to verified publications.</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><a href="https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+      <li><a href="contact_us.html">Contact Support</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      const submitBtn = this.querySelector('.submit-btn');
+      submitBtn.innerHTML = 'Sending...';
+      submitBtn.disabled = true;
+    });
+  </script>
+</body>
+</html>
